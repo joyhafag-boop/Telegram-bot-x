@@ -4,7 +4,6 @@ uvicorn==0.30.6
 web: uvicorn index:api --host 0.0.0.0 --port $PORTimport os
 import sqlite3
 from datetime import datetime, timedelta
-
 from fastapi import FastAPI, Request
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import (
