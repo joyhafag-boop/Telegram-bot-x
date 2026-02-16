@@ -1,4 +1,7 @@
-import os
+python-telegram-bot==21.6
+fastapi==0.115.0
+uvicorn==0.30.6
+web: uvicorn index:api --host 0.0.0.0 --port $PORTimport os
 import sqlite3
 from datetime import datetime, timedelta
 
@@ -661,3 +664,7 @@ tg_app.add_handler(CallbackQueryHandler(on_button))
 
 # Live chat forwarding
 tg_app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, forward_live_chat), group=1)
+/ (root)
+  index.py
+  requirements.txt
+  Procfile
